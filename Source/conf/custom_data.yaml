@@ -1,0 +1,4 @@
+train: '/content/gdrive/MyDrive/DATASET/Project Akhir/datasets/train'
+val: '/content/gdrive/MyDrive/DATASET/Project Akhir/datasets/val'
+nc: 3
+names: ["kendaraan_berat", "roda_2", "roda_4"]

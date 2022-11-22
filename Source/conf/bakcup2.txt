@@ -1,0 +1,43 @@
+import cv2 
+import numpy as np 
+import torch
+
+
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model = torch.hub.load('ultralytics/yolov5', 'custom', './best.pt').to(device)
+colors = list(np.random.rand(80,3)*255) 
+
+
+
+
+
+img = cv2 .VideoCapture(0,cv2.CAP_DSHOW)
+if img.isOpened(): 
+        window_handle = cv2.namedWindow("Camera", cv2.WINDOW_AUTOSIZE) 
+        # Window 
+        while cv2.getWindowProperty("Camera", 0) >= 0: 
+                ret, frame = img.read() 
+                if ret: 
+                         # detection process 
+                        with torch.no_grad(): 
+                         results = model(frame)
+                         results.print()
+                         
+
+                         for result in results:
+                                        result = model.detach().numpy() 
+                                        label  = result['label'] 
+                                        score  = result['score'] 
+                                        [(xmin,ymin),(xmax,ymax)] = result['bbox']
+                                        color = colors[result.index(label)] 
+                                        fram  = cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), color, 2)
+                                        frame = cv2.putText(frame, f"{str(label)} ({str(score)})", (xmin,ymin),
+                 cv2.FONT_HERSHEY_SIMPLEX , 0.75, color, 1, cv2.LINE_AA) 
+
+                cv2.imshow("Camera", frame) 
+                keyCode = cv2.waitKey(0) 
+                if keyCode == ord('q'): 
+                 break 
+        img.release() 
+        cv2.destroyAllWindows() 
