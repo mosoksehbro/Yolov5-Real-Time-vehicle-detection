@@ -1,0 +1,44 @@
+:root
+{
+    --black: rgba(0, 0, 0, 1);
+    --eerie-black: rgba(30, 30, 30, 1);
+    --venus: rgba(146, 133, 133, 1);
+    --alto: rgba(217, 217, 217, 1);
+    --red: rgba(255, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    --font-size-xs: 20px;
+    --font-size-s: 24px;
+    --font-size-m: 30px;
+    --font-size-l: 32px;
+    --font-size-l2: 40px;
+
+    --font-family-montserrat: "Montserrat";
+}
+
+.montserrat-bold-black-32px
+{
+    color: var(--black);
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.montserrat-medium-black-40px
+{
+    color: var(--black);
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-l2);
+    font-weight: 500;
+    font-style: normal;
+}
+
+.montserrat-thin-black-20px
+{
+    color: var(--black);
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-xs);
+    font-weight: 100;
+    font-style: italic;
+}

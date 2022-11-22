@@ -1,0 +1,76 @@
+.screen
+{
+    font-family:montserrat;
+    font-style:bold;
+    src:local('Montserrat'),url(https://fonts.cdnfonts.com/s/14883/Montserrat-Regular.woff) format('woff')
+    
+    
+}
+
+.card-body 
+{
+    background-color: #0F8A83;
+}
+
+
+.container-tombol
+{
+    margin-top: 10px;
+}
+
+.logo1
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+.logo2
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.logo3
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 50%;
+}
+
+.counting1
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.counting2
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.counting3
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.background1
+{
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
